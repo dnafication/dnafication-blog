@@ -2,37 +2,38 @@
 
 module.exports = {
   url: 'https://lumen.netlify.com',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-  copyright: '© All rights reserved.',
-  disqusShortname: '',
-  postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  title: 'Blog by dnafication',
+  subtitle:
+    'I write about latest web technologies & tools for development/testing',
+  copyright: '© 2019 dnafication. All rights reserved.',
+  disqusShortname: 'dnafication',
+  postsPerPage: 5,
+  googleAnalyticsId: 'UA-29342982-2',
   menu: [
     {
-      label: 'Articles',
+      label: 'articles',
       path: '/'
     },
     {
-      label: 'About me',
+      label: 'about',
       path: '/pages/about'
     },
     {
-      label: 'Contact me',
+      label: 'contact',
       path: '/pages/contacts'
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'dnafication',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio:
+      // eslint-disable-next-line quotes
+      `I am a performance test engineer at my day job but I'm mostly found playing with Reactjs, GraphQL & Nodejs. Really passionate about fast paced web movement and happy to join wherever its going 🏃‍♂️`,
     contacts: {
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vkontakte: '#'
+      twitter: 'dnafication',
+      github: 'dnafication',
+      // rss: '#',
+      linkedin: 'dnafication'
     }
   }
 };
