@@ -1,7 +1,7 @@
 ---
 template: post
 title: Fiddler - A quick starter
-slug: fiddler-quick-starter
+slug: posts/fiddler-quick-starter
 draft: true
 date: 2019-06-03T03:58:31.168Z
 description: >-
