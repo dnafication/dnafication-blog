@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://dnafication.netlify.com',
   title: 'Blog by dnafication',
   subtitle:
     'I write about latest web technologies & tools for development/testing',
@@ -28,11 +28,11 @@ module.exports = {
     photo: '/photo.jpg',
     bio:
       // eslint-disable-next-line quotes
-      `I am a performance test engineer at my day job but I'm mostly found playing with Reactjs, GraphQL & Nodejs. Really passionate about fast paced web movement and happy to join wherever its going 🏃‍♂️`,
+      `I am a performance test engineer at my day job but I enjoy playing with Reactjs, GraphQL & Nodejs. Really passionate about fast paced web movement and happy to join wherever its going 🏃‍♂️`,
     contacts: {
       twitter: 'dnafication',
       github: 'dnafication',
-      // rss: '#',
+      rss: '/rss.xml',
       linkedin: 'dnafication'
     }
   }
