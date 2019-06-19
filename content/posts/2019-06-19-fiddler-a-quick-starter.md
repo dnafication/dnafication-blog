@@ -6,7 +6,7 @@ draft: false
 date: 2019-06-03T03:58:31.168Z
 description: >-
   Fiddler allows you to record, inspect, modify and generate HTTP traffic
-  between clients and servers.
+  between clients and servers. Read on to learn basics of fiddler.
 category: web-dev
 tags:
   - web-dev
@@ -67,26 +67,32 @@ Its clear from above that http messages are human readable. The first line in ab
 
 ![http request](//images.ctfassets.net/yvcmf0lc3wc3/47GAmW6tTl0CtJpmT8jtaq/91d341c3490c4c65a3af4238546d68b6/image.png)
 
-Response object usually contains `protocol`, `status code`, `headers` and optionally a `body`.
+Response object usually contains `protocol`, `status code`, `status message`, `headers` and optionally a `body`.
 
 ``` http
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=UTF-8
 Strict-Transport-Security: max-age=31536000
-Date: Tue, 18 Jun 2019 04:05:35 GMT
+Date: Tue, 18 May 2019 04:05:35 GMT
 Server: gws
 Content-Length: 135802
 X-XSS-Protection: 0
 X-Frame-Options: SAMEORIGIN
-Expires: Tue, 18 Jun 2019 04:05:35 GMT
+Expires: Tue, 18 May 2019 04:05:35 GMT
 Cache-Control: private
-Set-Cookie: 1P_JAR=2019-06-18-04; expires=Thu, 18-Jul-2019 04:05:35 GMT; path=/; domain=.google.com.au
+Set-Cookie: 1P_JAR=2019-05-18-04; expires=Thu, path=/; domain=.google.com.au
 Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
 
-<!doctype html><html lang="en-AU"><head><meta charset="UTF-8"><meta content="width=device-width,minimum-scale=1.0" name="viewport"><meta content="telephone=no" name="format-detection"><meta content="address=no" name="format-detection"><meta content="origin" name="referrer"><meta content="notranslate" name="google">
+<!doctype html>
+<html lang="en-AU">
+<head>
+<title>Google!</title>
+</head>
+<body>
 
 ...
 
+</body>
 </html>
 ```
 
