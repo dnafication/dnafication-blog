@@ -20,7 +20,7 @@ Using the tool of your choice (Chrome dev tools, Fiddler etc.) grab the HTTP req
 appointmentEntryOption=RESERVING&appointmentBean.appointmentTimeOption=NEXT_AVAILABLE&appointmentBean.preferredTime=1&appointmentBean.startDate=&appointmentBean.endDate=&appointmentBean.referenceID=&appointmentBean.contactName=&appointmentBean.contactNumber=&appointmentBean.contactNote=&appointmentBean.alternateContactName=&appointmentBean.alternateContactNumber=&appointmentBean.alternateContactNote=&appointmentBean.accessInstructions=&appointmentBean.otherAccreditation=&appointmentBean.additionalSiteInformation=&appointmentBean.siteInfo=&appointmentBean.specialConditions=&submit=Create+Order
 ```
 
-Replace ampersands (&) with \n in notepad ++ which will make it look like below:
+Replace `&` (ampersands) with `\n` (new line) in notepad++ which will make it look like below:
 
 ```c
 appointmentEntryOption=RESERVING
@@ -51,7 +51,8 @@ Replace with: `"Name=\1", "Value=\2", ENDITEM,`
 
 Click replace all. Final output will be:
 
-```c
+
+```c
 "Name=appointmentEntryOption", "Value=RESERVING", ENDITEM,
 "Name=appointmentBean.appointmentTimeOption", "Value=NEXT_AVAILABLE", ENDITEM,
 "Name=appointmentBean.preferredTime", "Value=1", ENDITEM,
@@ -70,6 +71,7 @@ Click replace all. Final output will be:
 "Name=appointmentBean.siteInfo", "Value=", ENDITEM,
 "Name=appointmentBean.specialConditions", "Value=", ENDITEM,
 "Name=submit", "Value=Create+Order", ENDITEM,
-```
+
+```
 
 Now it can be added to `ITEMDATA` section of `web_submit_data`.
