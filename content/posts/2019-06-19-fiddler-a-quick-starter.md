@@ -48,6 +48,12 @@ Let's focus on request and response object views. What I have selected in the fi
 
 ![request and response](//images.ctfassets.net/yvcmf0lc3wc3/7LU2nIZMpLfXkYeAAKrFId/04ba918d20bd17e6d07a0c2a7fdd1a64/image.png)
 
+### Request
+
+Request is sent by the client like mobile app, web browser etc. It usually consists of the `method` (or `verb`), the `url` or `path` of the resource, the protocol `version`, `headers` and optionally request body.
+
+![http request](//images.ctfassets.net/yvcmf0lc3wc3/47GAmW6tTl0CtJpmT8jtaq/91d341c3490c4c65a3af4238546d68b6/image.png)
+
 ``` http
 GET https://www.google.com.au/ HTTP/1.1
 Host: www.google.com.au
@@ -63,11 +69,13 @@ Accept-Language: en,en-GB;q=0.9,en-US;q=0.8
 Cookie: SID=ZweS0XMsl21q-
 ```
 
-Its clear from above that http messages are human readable. The first line in above code snippet has the method `GET` and `path` to the resource that is being requested using protocol `HTTP/1.1`. Rest of the request is `headers` and in some case it can contain the `body` of the request.
+Its clear from above that http messages are human readable but it is not necessary. Any backend developer could interpret these variables sent through the http request and process the message accordingly. 
 
-![http request](//images.ctfassets.net/yvcmf0lc3wc3/47GAmW6tTl0CtJpmT8jtaq/91d341c3490c4c65a3af4238546d68b6/image.png)
+### Response
 
 Response object usually contains `protocol`, `status code`, `status message`, `headers` and optionally a `body`.
+
+![http response](//images.ctfassets.net/yvcmf0lc3wc3/tSOPYByyE9apR2lQduBFi/fcb4a8f2c9416def90a89e0f0a832858/image.png)
 
 ``` http
 HTTP/1.1 200 OK
@@ -80,7 +88,7 @@ X-XSS-Protection: 0
 X-Frame-Options: SAMEORIGIN
 Expires: Tue, 18 May 2019 04:05:35 GMT
 Cache-Control: private
-Set-Cookie: 1P_JAR=2019-05-18-04; expires=Thu, path=/; domain=.google.com.au
+Set-Cookie: yummy=2019-05-18-04; expires=Thu
 Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
 
 <!doctype html>
@@ -96,12 +104,16 @@ Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
 </html>
 ```
 
-![http response](//images.ctfassets.net/yvcmf0lc3wc3/tSOPYByyE9apR2lQduBFi/fcb4a8f2c9416def90a89e0f0a832858/image.png)
-
 > HTTP is an extensible protocol that is easy to use. The client-server structure, combined with the ability to simply add headers, allows HTTP to advance along with the extended capabilities of the Web.
 <cite>- [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)<cite>
 
-With a tool like fiddler, you can visualize and do a lot more with these captured traffic. It allows you to save these captured data in an archive file with `.saz` extention and view or edit them in future.
+## Quick & dirty tips
+Some handy short cuts I use daily.
+
+- Right click on any session object you want to filter and select 
+
+
+With a tool like fiddler, you can visualize and do a lot more with these captured traffic. It allows you to save these captured data in an archive file with `.saz` extension and view or edit them in future.
 
 
 [1]: https://www.telerik.com/fiddler "Fiddler"

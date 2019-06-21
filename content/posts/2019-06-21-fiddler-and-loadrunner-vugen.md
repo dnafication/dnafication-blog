@@ -14,4 +14,16 @@ tags:
   - loadrunner
   - fiddler
 ---
-some dummy text
+## Capture traffic using Fiddler
+First step is to prepare your capture archive file. If you are new to fiddler, you might want to read [it here.](/)
+
+
+
+## Create LR Script
+
+### Usual way
+
+### Alternate way
+If your LR was installed properly, you could also right-click on any captured traffic file (`.cap, .pcap, .saz or .har`) and select **Create VuGen script.**
+
+**Note:** this only works with protocols: Web - HTTP/HTML, Flex, SAP - Web, and Siebel - Web.
