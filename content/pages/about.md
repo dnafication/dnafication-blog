@@ -3,10 +3,8 @@ title: "About me"
 template: "page"
 ---
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+Experienced Engineer with a demonstrated history of working in the information technology and services industry. Highly skilled in Performance Testing, Test Automation with tools like JMeter, Selenium, and LoadRunner. I hack HTTP protocol between any client and server to emulate huge volumes of production to verify/certify an application. I write Groovy, Python or JS to fulfill my day to day automation job.
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/media/image-2.jpg)
+Well, that's my day job. However, what I am also passionate about is web technologies around Modern JavaScript, React, Graphql, Redux, nodejs etc. and Python. 
 
-*Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.*
-
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+For my tech-detox, I do enjoy travelling to various national parks, camping, hiking and other outdoor activities. Music of Dire Straits, Queen, AC/DC, Coldplay, John Mayer etc. keeps me going.
