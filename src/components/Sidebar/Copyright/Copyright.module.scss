@@ -4,4 +4,10 @@
 .copyright {
   color: lighten($color-gray, 18%);
   font-size: $typographic-small-font-size;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $color-gray;
+  }
 }
