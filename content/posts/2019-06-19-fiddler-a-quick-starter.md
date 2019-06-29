@@ -1,6 +1,7 @@
 ---
 template: post
 title: Fiddler - A quick starter
+author: dnafication/Dinanath Basumatary
 slug: /posts/fiddler-quick-starter
 draft: false
 date: 2019-06-03T03:58:31.168Z
@@ -104,16 +105,38 @@ Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
 </html>
 ```
 
-> HTTP is an extensible protocol that is easy to use. The client-server structure, combined with the ability to simply add headers, allows HTTP to advance along with the extended capabilities of the Web.
-<cite>- [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)<cite>
+<figure>
+	<blockquote>
+		<p>HTTP is an extensible protocol that is easy to use. The client-server structure, combined with the ability to simply add headers, allows HTTP to advance along with the extended capabilities of the Web.</p>
+		<footer>
+			<cite>— <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">MDN</a></cite>
+		</footer>
+	</blockquote>
+</figure>
 
 ## Quick & dirty tips
 Some handy short cuts I use daily.
 
-- Right click on any session object you want to filter and select 
+1. Right click on any session object you want to filter and select __Filter Now__ to show to hide certain types of sessions. ![Filter Now](https://i.imgur.com/BQ9nOW7.png)
 
+2. Right click and select __Comment__ to add additional information to the session. or hit __m__ on your keyboard. ![add comments in fiddler](https://i.imgur.com/aypSrbs.png)
 
-With a tool like fiddler, you can visualize and do a lot more with these captured traffic. It allows you to save these captured data in an archive file with `.saz` extension and view or edit them in future.
+3. Click Rules on the menu and check __Hide Image Requests__ if don't want to see image related requests in your session list. ![Hide image request](https://i.imgur.com/KNLazvn.png)
+
+4. For your easy viewing of sessions which are generally compressed and encoded, you may want to click __Decode__ on the shorcuts menubar. ![Shortcuts](https://i.imgur.com/mMUNq70.png)
+
+5. There is a command bar below the sessions list, which is called __QuickExec__. For example typing `@hackmd` and pressing enter will only select sessions which has `hackmd` in the their hostname. [Read more here.](https://docs.telerik.com/fiddler/knowledgebase/quickexec) ![search hackmd in quickexec in fiddler](https://i.imgur.com/INDVmWT.png) QuickExec allows you to select sessions based on different search criteria such as text, size, status, method etc.
+
+6. __Shift + Del__ will delete the inverse selection.
+
+7. __Ctrl + X__ removes all sessions from the list. Be careful!
+
+8. __F12__ toggles capture of traffic.
+
+9. User __TextWizard__ to do string manipulations or inspect the text request/response ![TextWizard](https://i.imgur.com/4cj2ZR0.png)
+
+### Summary
+With a tool like fiddler, you can visualize and do a lot more with these captured traffic. It allows you to save these captured data in an archive file with `.saz` extension and view or edit them in future. I find the interface very convenient in my day to day use. 
 
 
 [1]: https://www.telerik.com/fiddler "Fiddler"
