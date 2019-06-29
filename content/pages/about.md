@@ -2,8 +2,11 @@
 title: "About me"
 template: "page"
 ---
-
-Experienced Engineer with a demonstrated history of working in the information technology and services industry. Highly skilled in Performance Testing, Test Automation with tools like JMeter, Selenium, and LoadRunner. I hack HTTP protocol between any client and server to emulate huge volumes of production to verify/certify an application. I write Groovy, Python or JS to fulfill my day to day automation job.
+<figure class="float-right" style="width: 260px">
+	<img src="/dinanath-basumatary.jpg" alt="Dinanath Basumatary's portrait">
+	<figcaption>My portrait 😊</figcaption>
+</figure>
+Experienced Engineer with a demonstrated history of working in the information technology and services industry. Highly skilled in Performance Testing, Test Automation with tools like JMeter, Selenium, and LoadRunner. I hack HTTP protocol between any client and server to emulate huge volumes of production to verify/certify an application. I write Groovy, Python or JS to fulfill my day to day automation job. 
 
 Well, that's my day job. However, what I am also passionate about is web technologies around Modern JavaScript, React, Graphql, Redux, nodejs etc. and Python. 
 
