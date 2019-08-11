@@ -1,0 +1,43 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.contact {
+  @include margin-bottom(2);
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+
+  & input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  & label {
+    font-size: 0.8em;
+  }
+
+  &__btn-primary {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0px 5px;
+  }
+  &__btn-secondary {
+    background-color: #6d6d6d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
