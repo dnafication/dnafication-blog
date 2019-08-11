@@ -18,10 +18,10 @@ const ContactForm = ({ title, children }: Props) => {
       <p>Use the form below to contact me.</p>
 
       <form
+        name="contact-dnafication"
         method="post"
         netlify-honeypot="bot-field"
         data-netlify="true"
-        action="/"
       >
         <input type="hidden" name="bot-field" />
         <label for="name">
@@ -45,7 +45,7 @@ const ContactForm = ({ title, children }: Props) => {
         <label for="message">
           Message:
           <div>
-            <textarea name="message" id="message" rows="5" />
+            <textarea name="message" id="message" rows="4" />
           </div>
         </label>
 
