@@ -1,39 +1,39 @@
-'use strict';
+"use strict";
 
 module.exports = {
-  url: 'https://dnafication.netlify.com',
-  title: 'Blog by dnafication',
+  url: "https://dnafication.netlify.com",
+  title: "dnafication-blog",
   subtitle:
-    'I write about latest web technologies & tools for development/testing',
-  copyright: '© 2019 dnafication. All rights reserved.',
-  disqusShortname: 'dnafication',
+    "I write about latest web technologies & tools for development/testing",
+  copyright: "© 2019 dnafication. All rights reserved.",
+  disqusShortname: "dnafication",
   postsPerPage: 5,
-  googleAnalyticsId: 'UA-29342982-2',
+  googleAnalyticsId: "UA-29342982-2",
   menu: [
     {
-      label: 'articles',
-      path: '/'
+      label: "articles",
+      path: "/"
     },
     {
-      label: 'about',
-      path: '/pages/about'
+      label: "about",
+      path: "/pages/about"
     },
     {
-      label: 'contact',
-      path: '/pages/contacts'
+      label: "contact",
+      path: "/contact-me"
     }
   ],
   author: {
-    name: 'dnafication',
-    photo: '/photo.jpg',
+    name: "dnafication",
+    photo: "/photo.jpg",
     bio:
       // eslint-disable-next-line quotes
-      `I am a performance test engineer at my day job but I enjoy playing with Reactjs, GraphQL & Nodejs. Really passionate about fast paced web movement and happy to join wherever its going 🏃‍♂️`,
+      `A software engineer who is passionate about the high paced web movement and geared up to join wherever its heading 🚀`,
     contacts: {
-      twitter: 'dnafication',
-      github: 'dnafication',
-      rss: '/rss.xml',
-      linkedin: 'dnafication'
+      twitter: "dnafication",
+      github: "dnafication",
+      rss: "/rss.xml",
+      linkedin: "dnafication"
     }
   }
 };
