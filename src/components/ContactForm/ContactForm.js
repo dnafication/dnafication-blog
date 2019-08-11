@@ -35,7 +35,11 @@ class ContactForm extends React.Component {
       <div className={styles["contact"]}>
         <p>Use the form below to contact me.</p>
 
-        <form onSubmit={this.handleSubmit}>
+        <form
+          onSubmit={this.handleSubmit}
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
           <input type="hidden" name="bot-field" />
           <label for="name">
             Name:
