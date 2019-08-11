@@ -1,65 +1,107 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import styles from "./ContactForm.module.scss";
+import { Link } from "gatsby";
 
-type Props = {
-  title?: string,
-  children: React.Node
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
 };
 
-const ContactForm = ({ title, children }: Props) => {
-  const pageRef = useRef();
+class ContactForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: "", email: "", message: "", status: 0 };
+  }
 
-  useEffect(() => {
-    pageRef.current.scrollIntoView();
-  });
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "dnafication-contact", ...this.state })
+    })
+      .then(() => this.setState({ ...this.state, status: 1 }))
+      .catch(error => this.setState({ ...this.state, status: 2 }));
 
-  return (
-    <div ref={pageRef} className={styles["contact"]}>
-      <p>Use the form below to contact me.</p>
+    e.preventDefault();
+  };
 
-      <form
-        name="contact-dnafication"
-        method="post"
-        netlify-honeypot="bot-field"
-        data-netlify="true"
-      >
-        <input type="hidden" name="bot-field" />
-        <label for="name">
-          Name:
-          <div>
-            <input type="text" name="name" id="name" required />
-          </div>
-        </label>
-        <label for="email">
-          Email:
-          <div>
-            <input type="email" name="email" id="email" required />
-          </div>
-        </label>
-        <label for="subject">
-          Subject:
-          <div>
-            <input type="text" name="subject" id="subject" required />
-          </div>
-        </label>
-        <label for="message">
-          Message:
-          <div>
-            <textarea name="message" id="message" rows="4" />
-          </div>
-        </label>
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  reset = e => this.setState({ name: "", email: "", message: "", status: 0 });
 
-        <button type="submit" className={styles["contact__btn-primary"]}>
-          Send
-        </button>
-        <input
-          type="reset"
-          value="Clear"
-          className={styles["contact__btn-secondary"]}
-        />
-      </form>
-    </div>
-  );
-};
+  render() {
+    const { name, email, message } = this.state;
+    return (
+      <div className={styles["contact"]}>
+        <p>Use the form below to contact me.</p>
+
+        <form onSubmit={this.handleSubmit}>
+          <input type="hidden" name="bot-field" />
+          <label for="name">
+            Name:
+            <div>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                value={name}
+                onChange={this.handleChange}
+              />
+            </div>
+          </label>
+          <label for="email">
+            Email:
+            <div>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                value={email}
+                onChange={this.handleChange}
+              />
+            </div>
+          </label>
+          <label for="message">
+            Message:
+            <div>
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                value={message}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
+          </label>
+
+          <button type="submit" className={styles["contact__btn-primary"]}>
+            Send
+          </button>
+          <input
+            type="reset"
+            value="Clear"
+            onClick={this.reset}
+            className={styles["contact__btn-secondary"]}
+          />
+        </form>
+        {this.state.status === 1 && (
+          <div>
+            Form successfully submitted. <Link to="/">Click here</Link> to go
+            back to home page
+          </div>
+        )}
+        {this.state.status === 2 && (
+          <div>
+            Something unexpected occurred. Please try again later or DM me on
+            twitter.
+          </div>
+        )}
+      </div>
+    );
+  }
+}
 
 export default ContactForm;
